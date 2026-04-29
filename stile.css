@@ -1,0 +1,142 @@
+/* =========================
+   ESTILO GERAL DA PÁGINA
+========================= */
+
+/* Cor de fundo retrô (roxo escuro) e fonte padrão */
+body {
+    background-color: #1a0033;
+    color: #f5f5f5;
+    font-family: "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   TÍTULO PRINCIPAL
+========================= */
+
+h1 {
+    text-align: center;
+    color: #ff00cc;
+    font-size: 3rem;
+    text-shadow: 2px 2px #00ffff;
+    margin-top: 20px;
+}
+
+/* =========================
+   SEÇÕES (CAIXAS)
+========================= */
+
+/* Caixa estilo VHS */
+.section {
+    background-color: #2a004d;
+    border: 3px solid #ff00cc;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+/* =========================
+   LISTAS DE FILMES
+========================= */
+
+ul {
+    list-style-type: square;
+    padding: 10px;
+}
+
+ul li {
+    margin: 8px 0;
+    color: #00ffff;
+    font-weight: bold;
+}
+
+/* =========================
+   TABELA DE PREÇOS
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #000;
+}
+
+th {
+    background-color: #ff00cc;
+    color: white;
+    padding: 10px;
+    border: 2px solid #00ffff;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #00ffff;
+    text-align: center;
+}
+
+/* Efeito ao passar o mouse na linha */
+tr:hover {
+    background-color: #330066;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efeito hover */
+a:hover {
+    color: #ff00cc;
+    text-decoration: underline;
+}
+
+/* =========================
+   ESPAÇAMENTOS
+========================= */
+
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* =========================
+   EFEITO EXTRA RETRÔ (VHS)
+========================= */
+
+/* Simula um leve "glitch" de fita VHS */
+.vhs-effect {
+    position: relative;
+}
+
+.vhs-effect::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 204, 0.1);
+    pointer-events: none;
+}
+
+/* Linhas horizontais tipo TV antiga */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.03) 0px,
+        rgba(255,255,255,0.03) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+}
